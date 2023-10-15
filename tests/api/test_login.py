@@ -44,7 +44,7 @@ class TestLogin(unittest.TestCase):
         assert "username" in auth_resp
         assert "token" in auth_resp
 
-        assert auth_resp["username"] == "admin"
+        assert auth_resp["username"] == "brice"
         assert auth_resp["role"] == "client"
         assert auth_resp["token"]["access_token"]
         assert auth_resp["token"]["refresh_token"]

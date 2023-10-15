@@ -1,0 +1,2 @@
+class ArticleComposer:
+    pass
