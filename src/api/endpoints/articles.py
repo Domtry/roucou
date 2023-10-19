@@ -13,10 +13,11 @@ composer = ArticleComposer()
 
 @route.post("/register", response_model = https.HTTPResponse | Any)
 async def register_article(article: schemas.ArticleIn) -> https.HTTPResponse:
+    response = composer.register_user(article)
     return https.HTTPResponse(
-        data = None,
-        message = "Method not found",
-        success = False,
+        data = response.data,
+        message = response.message,
+        success = response.success,
         code_status = status.HTTP_404_NOT_FOUND
     )
 

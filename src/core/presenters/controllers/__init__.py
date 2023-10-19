@@ -1,1 +1,2 @@
 from src.core.presenters.controllers.users_controller import UserControllers
+from src.core.presenters.controllers.article_controller import ArticleControllers

@@ -1,9 +1,6 @@
-from starlette import status
-
 from src import data
 from src.core.domain import entities
 from src.core.repo.services import UserService
-from src.data import https
 
 
 class UserControllers:
@@ -21,7 +18,7 @@ class UserControllers:
         if search.success:
             return data.Response(
                 data = None,
-                message = "Ce numéro de téléphone à déjà été utilisé",
+                message = "Ce numéro de téléphone à déjà été utilisé.",
                 success = False
             )
 
